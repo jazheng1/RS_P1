@@ -1,0 +1,61 @@
+<div id="blur"></div>
+
+<div id="heroContainer" class="container">
+
+    <div id="welcomeText" class="row">
+        <div class="col-8">
+            <h1>What can we find for you today?</h1>
+        </div>
+    </div>
+
+    <div id="locationForm">
+        <form id="getLocation">
+            <div class="row">
+                <div class="col-5">
+                    <input id="user-location" class="form-control" type="text" placeholder="What city are you from? ex. Miami"
+                        aria-label="default input example">
+                </div>
+                <div class="col-3">
+                    {{!-- <button type="submit" class="btn btn-primary" onclick="addInput()">Add</button> --}}
+                    <button type="submit" class="btn btn-primary">Locate</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div id="tagForm">
+        <form id="createTag">
+            <div class="row">
+                <div class="col-5">
+                    <input id="user-input" class="form-control" type="text" placeholder="What are you looking for?"
+                        aria-label="default input example">
+                </div>
+                <div class="col-3">
+                    {{!-- <button type="submit" class="btn btn-primary" onclick="addInput()">Add</button> --}}
+                    <button type="submit" class="btn btn-primary">Add</button>
+                    <button id="generateStores" onclick="appear('suggestionsContainer')" type="submit" class="btn btn-primary">Generate Stores</button>
+                </div>
+            </div>
+            <div id="tagGroup" class="row">
+            </div>
+        </form>
+    </div>
+
+</div>
+
+{{>suggestions}}
+
+
+<script>
+    function appear(id) {
+        var element = document.getElementById(id);
+        element.style.visibility = "visible";
+        element.style.display = "block";
+    }
+
+    function dissappear(id) {
+        var element = document.getElementById(id);
+        element.style.visibility = "hidden";
+        element.style.display = "none";
+    }
+</script>

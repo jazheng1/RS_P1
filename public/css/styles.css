@@ -1,0 +1,83 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    height: 100%;
+    opacity: .7;
+    z-index: -1;
+}
+
+#heroContainer {
+    position: relative;
+    z-index: 1;
+    bottom: 80%;
+    left: 15%;
+}
+
+#WelcomeText, h1 {
+    text-align: left;
+    font-size: 100px;
+}
+
+#tagForm {
+    padding-top: 20px;   
+}
+
+#aboutLink {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+#aboutLink:hover {
+    color: #007bff;
+}
+
+.navbar {
+    padding-bottom: 30px;
+}
+
+#aboutContainer {
+    background-color: rgba(94, 88, 88, 0.4);
+    position: absolute;
+    z-index: auto;
+    display: none;
+    visibility: hidden;
+    top: 5%;
+    left: 15%;
+}
+
+#generateStores {
+    visibility: hidden;
+}
+
+#suggestionsLink {
+    color: white;
+    text-decoration: none;
+}
+
+#suggestionsContainer {
+    background-color: rgba(94, 88, 88, 0.4);
+    position: absolute;
+    z-index: 10;
+    display: none;
+    visibility: hidden;
+    bottom: 50%;
+    left: 25%;
+    width: fit-content;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
