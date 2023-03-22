@@ -1,5 +1,7 @@
 let baseUrl2 = window.location.href;
 let locationCheck = false;
+let city;
+let map;
 
 // get getLocation attribute, and have the inputted form communicate with backend
 $("#getLocation").submit(async (e) => {
@@ -21,11 +23,11 @@ $("#getLocation").submit(async (e) => {
         }
     ).then(
         function(data) {
-            let city = data.fromServerLocation;
+            city = data.fromServerLocation;
             console.log("City: " + city);
             updateLocationCheck();
             //updates map to new location
-            updateMap(city);
+            map = updateMap(city);
             showGenerateStoresButton();
         }
     )
@@ -38,10 +40,8 @@ function updateMap(city) {
 
     geocoder.geocode( { 'address': city }, function(results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
-            // console.log(results[0]);
             coordinates.push(results[0].geometry.location.lat());
             coordinates.push(results[0].geometry.location.lng());
-            console.log(coordinates);
 
             var latlng = new google.maps.LatLng(coordinates[0], coordinates[1]);
             var mapOptions = {
@@ -59,7 +59,7 @@ function updateMap(city) {
             alert("Could not find city: " + city);
         }
     });
-    return coordinates, map;
+    return map;
 }
 
 function updateLocationCheck() {
@@ -77,4 +77,12 @@ function getLocationCheck() {
 
 function resetInputField() {
     $('#getLocation')[0].reset();
+}
+
+function getCity() {
+    return city;
+}
+
+function getMap() {
+    return map;
 }

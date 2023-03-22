@@ -32,11 +32,11 @@
 
     {{!-- Generate Map --}}
     <script>
-        let map;
-        let city = "Miami";
+        let startingMap;
+        let startCity = "Miami";
 
         function initMap() {
-            map = new google.maps.Map(document.getElementById("map"), {
+            startingMap = new google.maps.Map(document.getElementById("map"), {
                 center: { lat: 25.861681, lng: -80.191788 },
                 zoom: 12,
                 disableDefaultUI: true,

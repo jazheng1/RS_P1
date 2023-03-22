@@ -27,12 +27,6 @@ app.get('/', (req, res) => {
     res.render('index');
 })
 
-app.get('/suggestions', (req, res) => {
-
-  res.render('suggestions');
-})
-
-
 app.post('/', (req, res) => {
 
 		res.status(200).json({
@@ -40,11 +34,3 @@ app.post('/', (req, res) => {
       "fromServerLocation": req.body.location
     });
 });
-
-app.post('/suggestions', (req, res) => {
-
-  res.status(200).json({
-    "fromServerInput": req.body.input,
-    "fromServerLocation": req.body.location
-  });  
-})

@@ -42,13 +42,15 @@ html, body {
 }
 
 #aboutContainer {
-    background-color: rgba(94, 88, 88, 0.4);
+    /* background-color: rgba(94, 88, 88, 0.4); */
+    background-color: rgba(255,255,255, .8);
     position: absolute;
-    z-index: auto;
+    z-index: 10;
     display: none;
     visibility: hidden;
     top: 5%;
-    left: 15%;
+    left: 10%;
+    padding: 15px;
 }
 
 #generateStores {
@@ -61,13 +63,13 @@ html, body {
 }
 
 #suggestionsContainer {
-    background-color: rgba(94, 88, 88, 0.4);
+    /* background-color: rgba(94, 88, 88, 0.4); */
+    background-color: rgba(255,255,255, .6);
     position: absolute;
     z-index: 10;
     display: none;
     visibility: hidden;
     bottom: 50%;
-    left: 25%;
     width: fit-content;
 }
 
@@ -75,9 +77,40 @@ html, body {
 @-webkit-keyframes fadeIn {
     from {opacity: 0;} 
     to {opacity: 1;}
-  }
-  
-  @keyframes fadeIn {
+}
+
+@keyframes fadeIn {
     from {opacity: 0;}
     to {opacity:1 ;}
+}
+
+
+@media (min-width: 10px) {  
+    h1 {font-size:1.5rem;} /*1rem = 16px*/
+    #suggestionsContainer {
+        left: 10%;
+    }
+  }
+
+  @media (min-width: 650px) {  
+    h1 {font-size:70px;} /*1rem = 16px*/
+    #suggestionsContainer {
+        left: 25%;
+    }
+  }
+
+  @media (min-width: 1000px) {  
+    h1 {font-size:100px;} /*1rem = 16px*/
+    #suggestionsContainer {
+        left: 25%;
+    }
+  }
+
+  @media(min-width: 1500px) {
+    #suggestionsContainer {
+        left: 35%;
+    }
+    #aboutContainer {
+        left: 25%;
+    }
   }

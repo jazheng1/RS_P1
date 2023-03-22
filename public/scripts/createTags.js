@@ -8,7 +8,6 @@ $("#createTag").submit(async (e) => {
     e.preventDefault();
     let input = document.getElementById("user-input").value;
     let url = baseUrl;
-    console.log("input: " + input);
     fetch(url, {
         method: "POST",
         headers: {
@@ -22,11 +21,9 @@ $("#createTag").submit(async (e) => {
         }
     ).then(
         function (data) {
-            console.log("data: " + data);
             // generate tags
             generateTags(data);
             // make generate stores button visible
-            console.log(getLocationCheck());
             showGenerateStoresButton();
         }
     )
