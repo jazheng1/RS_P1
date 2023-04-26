@@ -6,7 +6,7 @@ A non-utility website where people can enter the city that they are in, along wi
 ## Execution:
 I used the google Places API to help find the location that the user input, using it for the backdrop and for the location of the store. I then have the user enter keywords that describe what they are looking for. They need a minimum of 2 keywords before a store can be generated for them. 
 
-Figma Designs: https://www.figma.com/file/H2xuSuuETqmB6bihBAU34g/Radical-Software%3A-P1?type=design&node-id=0%3A1&t=c67xqScQXMN0K2Rt-1
+## Figma Designs: https://www.figma.com/file/H2xuSuuETqmB6bihBAU34g/Radical-Software%3A-P1?type=design&node-id=0%3A1&t=c67xqScQXMN0K2Rt-1
 
 ## To Run
 - make sure you have the latest version of node on your desktop
